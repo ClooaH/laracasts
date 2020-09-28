@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ArticlesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,3 +46,5 @@ Route::get('/about', function () {
         'articles' => App\Models\Article::take(3)->latest()->get()
     ]);
 });
+
+Route::get('/articles/{article}', [ArticlesController::class, 'show']);
