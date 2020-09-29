@@ -18,7 +18,7 @@
 					<h3>
 					<a href="/articles/{{ $article->id }}">{{$article->title}}</a>
 					</h3>
-					<p><a href="#">{{$article->excerpt}}</a></p>
+					<p><a href="{{ $article->id }}">{{$article->excerpt}}</a></p>
 				</li>
 				@endforeach
 			</ul>
