@@ -20,6 +20,7 @@ Released   : 20140225
 <link href="/default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/css/app.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
