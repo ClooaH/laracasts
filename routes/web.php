@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +16,7 @@ use App\Http\Controllers\ArticlesController;
 |
 */
 
-Route::get('/', function () {
-    $name = request('name');
-    
-    return view('test', [
-        'name' => $name
-    ]);
-});
+Route::get('/', [PagesController::class, 'home']);
 
 Route::get('/posts/{post}', [PostsController::class,'show']);
 
