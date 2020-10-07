@@ -15,11 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        app()->bind('App\Models\Example', function () {
-            $collaborator = new Collaborator();
-            $foo = 'foobar';
-
-            return new Example($collaborator, $foo);
+        app()->bind(Example::class, function (){
+            return new Example('apiKey');
         });
     }
 
