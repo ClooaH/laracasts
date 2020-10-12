@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +25,9 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', [ContactController::class, 'show']);
+
+Route::post('/contact', [ContactController::class, 'store']);
 
 Route::get('/index', function () {
     return view('index');
